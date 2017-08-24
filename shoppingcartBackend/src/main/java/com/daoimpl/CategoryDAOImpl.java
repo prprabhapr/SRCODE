@@ -1,5 +1,7 @@
 package com.daoimpl;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.hibernate.HibernateException;
@@ -40,14 +42,10 @@ public boolean saveOrUpdate(Category category)
 		
 	}
 }
-/*@Transactional
-public List<Category> list() {
-	Session session=sessionFactory.openSession();
-	Transaction tx=session.beginTransaction();
-    @SuppressWarnings("unchecked")
-	List<Category> list=session.createQuery("from category").list();
-	tx.commit();
-	return list;
-}*/
+@Transactional
+public List<Category> list() 
+{
+	return sessionFactory.getCurrentSession().createQuery("from Category").list();
+}
 
 }

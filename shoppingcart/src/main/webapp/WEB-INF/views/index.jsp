@@ -25,7 +25,7 @@
       <li class="active"><a href="h1">Home</a></li>
       <li><a href="displayProducts">View All</a></li>
       <li><a href="addcategory">Add Category</a></li>
-       <li><a href="displaycategory">Display Category</a></li>
+       <li><a href="manageCategory">Display Category</a></li>
      </ul>
       <ul class="nav navbar-nav navbar-right">
       <li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

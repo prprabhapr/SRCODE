@@ -1,7 +1,12 @@
 package com.controller;
 
+import java.util.List;
+
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -11,7 +16,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.dao.CategoryDAO;
 import com.model.Category;
-import com.model.User;
 
 @Controller
 public class CategoryController 
@@ -30,31 +34,31 @@ public class CategoryController
 	{
 		return new Category();
 	}
-	/*@RequestMapping(value="/addUser",method=RequestMethod.POST)
-	public String insertUser(@Validated @ModelAttribute("user")User user,BindingResult result)*/
 	@RequestMapping(value="/insertCategory",method=RequestMethod.POST) //THIS IS FOR ADDING CATEGORY INSERTING VALUES INTO DB
 	public String insertCategory(@Validated @ModelAttribute("category")Category category,BindingResult result)
 	{
 			if(result.hasErrors())
 		{
 			return "addCategory";
-		}
-			System.out.println(category.getId());
-			System.out.println(category.getName());
-			System.out.println(category.getDescription());
+	}
+//			System.out.println(category.getId());
+//			System.out.println(category.getName());
+//			System.out.println(category.getDescription());
 			categoryDAO.saveOrUpdate(category);
 		return "addCategory";
 	}
-	/*@RequestMapping("/displaycategory")
-	public String displaycategory()
+	@RequestMapping("/displaycat")
+	public ModelAndView display()
 	{
-		return "displaycategory";
+		ModelAndView m1=new ModelAndView("displayCategory");
+		return m1;
 	}
-	@RequestMapping(value="/manageCategory",method=RequestMethod.POST)
-	public String displayCategory(@ModelAttribute("category")Category category,Model m1)
+	@RequestMapping(value="/manageCategory",method=RequestMethod.GET)
+	public ModelAndView displayCategory()
      {
-	//m1.addAttribute("category",category);
-	//m1.addAttribute("categoryList",categoryDAO.list());
-	return "category";
-     }*/
+		System.out.println("one");
+		List<Category> list=categoryDAO.list();
+		System.out.println("two");
+		return new ModelAndView("displayCategory","list",list);
+     }
 }
