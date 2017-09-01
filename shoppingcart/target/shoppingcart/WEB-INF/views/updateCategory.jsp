@@ -29,7 +29,7 @@
 </head>
 <%@ include file = "header.jsp" %>
 <body>
-<form class="form-horizontal" commandName="category" method="post" action="updateCategory">
+<form class="form-horizontal" commandName="category" method="post" action="updateCategory1">
 <legend>Category</legend>
 <br><br><center>
 <br><br>
