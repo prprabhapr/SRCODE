@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -20,7 +21,8 @@ import com.model.Category;
 @Controller
 public class CategoryController 
 {
-	
+	@Autowired
+	 Category category;
 	@Autowired
 	private CategoryDAO categoryDAO;
 	
@@ -61,4 +63,16 @@ public class CategoryController
 		System.out.println("two");
 		return new ModelAndView("displayCategory","list",list);
      }
+	@RequestMapping(value="/manage_category_edit/{id}")
+	public ModelAndView  editCategory(@PathVariable("id") int id,Model model)
+	{
+		model.addAttribute("category",category);
+		return new ModelAndView("updateCategory","category",category);
+	}
+	@RequestMapping(value="updateCategory1",method=RequestMethod.POST)
+	public ModelAndView updateCategory(@Valid @ModelAttribute("category")Category category,BindingResult result,Model model)
+	{
+		categoryDAO.updateCategory(category);
+		return new ModelAndView("manageCategory");
+	}
 }

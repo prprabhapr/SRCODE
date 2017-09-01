@@ -23,6 +23,11 @@ public class HomeController
 		{
 			return "index";
 		}
+	@RequestMapping("index")	//REQ-MAPPING ANNA 4 METHOD 
+	public String indexhome()
+	{
+		return "index";
+	}
 	@RequestMapping("/register")
 	public String register()
 	{

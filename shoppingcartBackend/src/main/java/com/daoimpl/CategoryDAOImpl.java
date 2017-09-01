@@ -5,6 +5,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -46,6 +47,27 @@ public boolean saveOrUpdate(Category category)
 public List<Category> list() 
 {
 	return sessionFactory.getCurrentSession().createQuery("from Category").list();
+}
+@Transactional
+public Category get(int id) {
+	// TODO Auto-generated method stub
+	Session session=sessionFactory.openSession();
+	Category category=(Category)session.load(Category.class,id);
+	return category;
+}
+@Transactional
+public boolean updateCategory(Category category) {
+	try{
+	// TODO Auto-generated method stub
+	sessionFactory.getCurrentSession().update(category);
+	}
+	catch(Exception e)
+	{
+	e.printStackTrace();
+	
+	return false;
+	}
+	return true;
 }
 
 }

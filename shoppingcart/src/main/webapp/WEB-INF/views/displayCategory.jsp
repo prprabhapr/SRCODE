@@ -7,31 +7,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
-<body>
- 
-<form:form action="manageCategory" method="GET">
- <br>
- <h3> category list</h3>
-  <table border="2" width="70%" cellpadding="2"> 
+  <%@ include file = "header.jsp" %><br><br><br>
+<body  style="background-color:powderblue;">
+<center>
+ <form:form action="manageCategory" method="GET">
+ <style>h2 {color:red;}</style><%--THIS STYLE TAG FOR h2--%>
+ <h2> CATEGORY LIST</h2>
+ <table border="4" width="40%" cellpadding="2"> 
  <tr>
- <td>category id</td>
- <td>category name</td>
- <td>category description<td>
+ <td><center><b>CID</b></center></td>
+ <td><center><b>CNAME</b></center></td>
+ <td><center><b>CDESCRIPTION</b></center></td>
  </tr>
  <c:forEach items="${list}" var="category">
  <tr>
- <td>${category.id}</td>
- <td>${category.name}</td>
- <td>${category.description}</td>
- <td><a href="#">
-          <span class="glyphicon glyphicon-edit"></span>
-        </a></td>
-        <td><a href="#">
-          <span class="glyphicon glyphicon-remove"></span>
-        </a></td>
-        </tr>
+ <td><center>${category.id}</center></td>
+ <td><center>${category.name}</center></td>
+ <td><center>${category.description}</center></td>
+ <td><center><a href="<c:url value='/manage_category_edit/${category.id}'/>"><span class="glyphicon glyphicon-edit"></span></a></center></td>
+ <td><center><a href="#"><span class="glyphicon glyphicon-remove"></span></a></center></td>
+ </tr>
  </c:forEach>
  </table>
-  </form:form>
+ </form:form>
+ </center>
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><%@ include file = "footer.jsp" %>
 </body>
 </html>

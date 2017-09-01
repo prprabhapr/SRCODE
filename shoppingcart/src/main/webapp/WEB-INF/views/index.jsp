@@ -22,7 +22,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
       <ul class="nav navbar-nav">
-      <li class="active"><a href="h1">Home</a></li>
+      <li class="active"><a href="index">Home</a></li>
       <li><a href="displayProducts">View All</a></li>
       <li><a href="addcategory">Add Category</a></li>
        <li><a href="manageCategory">Display Category</a></li>

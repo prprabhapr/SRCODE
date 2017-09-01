@@ -31,7 +31,7 @@
 <ul class="nav navbar-nav">
 
 
- <li><a href="/">Home</a></li>
+ <li><a href="index">Home</a></li>
 <li><a href="Contact Us"><i class="fa fa-address-book" aria-hidden ="true"></i></a></li>
 </ul>
  

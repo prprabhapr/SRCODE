@@ -12,8 +12,8 @@ public interface CategoryDAO {
 	
 	
 //	/*
-//	public boolean updateCategory( Category  category);
-//	Category get(int id);
+    public boolean updateCategory( Category category);
+	public Category get(int id);
 //	boolean deleteCategory(String id) */
 //	
 }
