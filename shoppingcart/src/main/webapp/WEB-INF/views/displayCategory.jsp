@@ -31,6 +31,6 @@
  </table>
  </form:form>
  </center>
- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><%@ include file = "footer.jsp" %>
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><%@ include file = "footer.jsp" %>
 </body>
 </html>

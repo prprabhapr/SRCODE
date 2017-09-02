@@ -1,2 +1,3 @@
 com\controller\CategoryController.class
+com\controller\SupplierController.class
 com\controller\HomeController.class

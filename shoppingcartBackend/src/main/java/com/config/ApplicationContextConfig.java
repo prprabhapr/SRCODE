@@ -16,15 +16,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.model.Category;
 import com.model.User;
-
-
-
-
 @Configuration
 @ComponentScan("com")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
-	
 	@Autowired
 	@Bean(name = "dataSource")
 	public DataSource getDataSource() {
@@ -35,9 +30,7 @@ public class ApplicationContextConfig {
 	    dataSource.setPassword("sa");
 		System.out.println("Database is connected.....!");
 		return dataSource;
-
-	}
-	
+   }
 	private Properties getHibernateProperties() {
 		Properties properties = new Properties();
 		properties.put("hibernate.show_sql", "true");
@@ -54,7 +47,6 @@ public class ApplicationContextConfig {
 	    sessionBuilder.addAnnotatedClasses(User.class);
 	    sessionBuilder.addAnnotatedClasses(Category.class);
 	    return sessionBuilder.buildSessionFactory();
-		
 	}
 	@Autowired
 	@Bean(name = "transactionManager")
@@ -62,7 +54,4 @@ public class ApplicationContextConfig {
 		HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
 		System.out.println("Transaction");
 		return transactionManager;
-	}
-	
-	
-}
+	}}
