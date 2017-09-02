@@ -69,5 +69,21 @@ public boolean updateCategory(Category category) {
 	}
 	return true;
 }
-
+@Transactional
+public boolean deleteCategory(int id)
+{
+	Category category = new Category();
+	category.setId(id);
+	try 
+	    {
+		sessionFactory.getCurrentSession().delete(category);
+		return true;
+		} 
+	catch (Exception e) 
+	    {
+		e.printStackTrace();
+		return false;
+	    }
+ }
 }
+

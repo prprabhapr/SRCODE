@@ -46,15 +46,15 @@
     <div class="carousel-inner" role="listbox">
     
       <div class="item active">
-         <img src="<c:url value="/resources/images/surfacepro4.jpg"/>" alt="Chania" width="600" height="500">
+         <img src="<c:url value="/resources/images/surfacepro4.jpg"/>" alt="Chania" width="1920" height="1080">
       </div>
 
       <div class="item">
-        <img src="<c:url value="/resources/images/apple.jpg"/>" alt="Chania" width="600" height="500">
+        <img src="<c:url value="/resources/images/apple.jpg"/>" alt="Chania" width="1920" height="1080">
       </div>
     
       <div class="item">
-        <img src="<c:url value="/resources/images/evvy.jpg"/>" alt="Chania" width="600" height="500"> 
+        <img src="<c:url value="/resources/images/evvy.jpg"/>" alt="Chania" width="1920" height="1080"> 
       </div>
                                     <!-- L&R controls -->
           

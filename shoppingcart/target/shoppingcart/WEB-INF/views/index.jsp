@@ -1,23 +1,19 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <html lang="en">
-<head>
-                         <title>THIS IS INEDX.JSP</title>
+<head><title>THIS IS INEDX.JSP</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-      <style>
+  <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img 
-  {
-      width: 70%;
-      margin: auto;
-   }
-      </style>
-</head>
-                                                      <%--THIS IS BODY --%>
+  { width: 70%;
+    margin: auto;
+   }</style>
+</head>                                   <%--THIS IS BODY --%>
 <body>   
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -50,15 +46,15 @@
     <div class="carousel-inner" role="listbox">
     
       <div class="item active">
-         <img src="<c:url value="/resources/images/surfacepro4.jpg"/>" alt="Chania" width="600" height="500">
+         <img src="<c:url value="/resources/images/surfacepro4.jpg"/>" alt="Chania" width="1920" height="1080">
       </div>
 
       <div class="item">
-        <img src="<c:url value="/resources/images/apple.jpg"/>" alt="Chania" width="600" height="500">
+        <img src="<c:url value="/resources/images/apple.jpg"/>" alt="Chania" width="1920" height="1080">
       </div>
     
       <div class="item">
-        <img src="<c:url value="/resources/images/evvy.jpg"/>" alt="Chania" width="600" height="500"> 
+        <img src="<c:url value="/resources/images/evvy.jpg"/>" alt="Chania" width="1920" height="1080"> 
       </div>
                                     <!-- L&R controls -->
           

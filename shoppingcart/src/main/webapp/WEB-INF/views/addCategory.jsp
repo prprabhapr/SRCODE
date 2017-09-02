@@ -9,9 +9,7 @@
     <title>THIS IS ADDCATEGORY.JSP</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <style type="text/css">
-    
-    </style>
+    <style type="text/css"></style>
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -25,7 +23,7 @@
           var iframe_height = parseInt($('html').height()); 
           window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
         });
-    </script>
+      </script>
 </head>
 <%@ include file = "header.jsp" %>
 <body>
@@ -35,7 +33,7 @@
 <br><br>
  <div class="modal-dialog">
     <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header"> 
           <h1 class="text-center">ADD CATEGORY</h1>
         </div>
          <div class="modal-body">  

@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
-  <head>
+  <head><title>THIS IS DISPLAYCAT.JSP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -24,8 +24,8 @@
  <td><center>${category.id}</center></td>
  <td><center>${category.name}</center></td>
  <td><center>${category.description}</center></td>
- <td><center><a href="<c:url value='/manage_category_edit/${category.id}'/>"><span class="glyphicon glyphicon-edit"></span></a></center></td>
- <td><center><a href="#"><span class="glyphicon glyphicon-remove"></span></a></center></td>
+ <td><center><a href="<c:url value='/manage_category_edit?id=${category.id}'/>"><span class="glyphicon glyphicon-edit"></span></a></center></td>
+ <td><center><a href="<c:url value='/manage_category_delete?id=${category.id}'/>"><span class="glyphicon glyphicon-remove"></span></a></center></td>
  </tr>
  </c:forEach>
  </table>

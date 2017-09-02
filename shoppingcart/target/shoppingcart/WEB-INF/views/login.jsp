@@ -1,12 +1,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <title>THIS IS LOGIN.JSP</title>
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
-
-    <title>THIS IS LOGIN.JSP</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <style type="text/css">
     .colorgraph {
@@ -35,8 +33,7 @@
         });
     </script>
 </head>
-<body>
-<%@ include file = "footer.jsp" %><br><br>
+<body><%@ include file = "header.jsp" %><br><br><br><br><br>
 		<div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
@@ -53,11 +50,10 @@
 
              <div class="form-group">
                  <input type="submit" class="btn btn-block btn-lg btn-primary" value="Login"/>
-                 <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Forgot Password</a></span>
+                 <span class="pull-right"><a href="register">Register</a></span><span><a href="#">Forgot Password</a></span>
              </div>
          </div>
     </div>
  </div>
-</body><br><br><br><br>
-<%@ include file = "footer.jsp" %>
+</body><br><br><br><br><%@ include file = "footer.jsp" %>
 </html>

@@ -24,8 +24,8 @@
  <td><center>${category.id}</center></td>
  <td><center>${category.name}</center></td>
  <td><center>${category.description}</center></td>
- <td><center><a href="<c:url value='/manage_category_edit/${category.id}'/>"><span class="glyphicon glyphicon-edit"></span></a></center></td>
- <td><center><a href="#"><span class="glyphicon glyphicon-remove"></span></a></center></td>
+ <td><center><a href="<c:url value='/manage_category_edit?id=${category.id}'/>"><span class="glyphicon glyphicon-edit"></span></a></center></td>
+ <td><center><a href="<c:url value='/manage_category_delete?id=${category.id}'/>"><span class="glyphicon glyphicon-remove"></span></a></center></td>
  </tr>
  </c:forEach>
  </table>
